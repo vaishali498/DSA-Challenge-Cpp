@@ -1,0 +1,16 @@
+class Solution {
+  public:
+   
+    int kthSmallest(vector<int> &arr, int k) {
+        set<int>s;
+        for(auto u:arr)
+        {
+            s.insert(u);
+            
+        }
+        auto it= s.begin();
+        advance(it, k-1);
+        int ans=*it;
+        return ans;
+    }
+};
